@@ -98,7 +98,7 @@ function Fibonacci () {
 
 
 // menu 
-function menu() {
+function menu() { 
     console.log('\nMenú');
     console.log('1). Conversor de °C a °F.');
     console.log('2). Indice de masa corporal.');
@@ -108,7 +108,7 @@ function menu() {
 
     let option = prompt('Seleccione una opción del menu: ');
 
-    switch(option) {
+    switch(option) { // es un menu que se entrega en la terminal para que el usuario le sea mas facil de interatuar con las programs realizados, en cada caso es la opcion que tome el usuario se seleciona la opcion dada y da a correr el programa deseado por el usuario y al final del programa vuelve el menu para elegir otra opcion o salir del menu
         case '1':
             console.log('\nHas seleccionado la opcion 1.');
             conversor();
