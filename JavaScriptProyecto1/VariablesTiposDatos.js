@@ -17,21 +17,7 @@ estatura en metros  y para calcular el IMC usamos la formula Peso/(Altura)^2
 3 El generador de nombre de usuario: solicitamos el nombre, apellido y año de nacimiento
 junto a esta informacion generamos el nombre de usuario
 4 La funcion Fibonacci (con ciclos) suma los dos numeros anteriores dados por ustedes
-5 Y la ultima opcion de este menu es la salida de este
-
-En el archivo de EstructurasDeControl.js existe el menu de Estructura de Control en el cual
-se encuentran los siguientes indices:
-1 Adivina  el Numero en este indice realiza una interaccion con el usuario al preguntar que 
-numero es del 1 al 100, si no es el correcto este dira si el numero es mas bajo o alto
-2 Calculadora facturial solicitamos un numero al usuario y le responderemos con el numero 
-factorial del antes mencionado
-3 Contador de Vocales al proporcionarnos una frace o palabra la funcion contara las vocales en esta
-4 Salir este nos cerrara el menu al no escoger ninguna de las anteriores
-
-Y en el archivo Listas.js no tenemos lista, pero tenemos tres listas las cuales hacen:
--  La primera funcion nos indica cual de los numeros en la lista es el menor y el mayor
--  La segunda funcion concatena las dos listas y organizarla de menor a mayor
--  La tercera funcion invierte el orden de los numero dentro de una lista 
+5 Y la ultima opcion de este menu es la salida de este 
 */
 
 const prompt = require('prompt-sync')();
