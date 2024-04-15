@@ -1,3 +1,25 @@
+/*
+- Fecha de publicación: 14 de abril del 2024
+- Hora: 6:00 PM
+- Versión de su codigo: 11
+- Autores del lenguaje utilizado: ECMASCRIPT 6.0 (javascrit 6.0)
+- Versión del lenguaje utilizado: 6.0
+- Presentado por:   Ingeniero Camilo Giraldo
+                    Ingeniera Angie Guazaquillo
+- Universidad Tecnológica de Pereira
+- Programa de Ingenieria de Sistemas y Computación
+- Descripcion del programa:
+
+En el archivo de EstructurasDeControl.js existe el menu de Estructura de Control en el cual
+se encuentran los siguientes indices:
+1 Adivina  el Numero en este indice realiza una interaccion con el usuario al preguntar que 
+numero es del 1 al 100, si no es el correcto este dira si el numero es mas bajo o alto
+2 Calculadora facturial solicitamos un numero al usuario y le responderemos con el numero 
+factorial del antes mencionado
+3 Contador de Vocales al proporcionarnos una frace o palabra la funcion contara las vocales en esta
+4 Salir este nos cerrara el menu al no escoger ninguna de las anteriores
+*/
+
 const prompt = require('prompt-sync')();
 
 // Adivina el numero [0,100)
