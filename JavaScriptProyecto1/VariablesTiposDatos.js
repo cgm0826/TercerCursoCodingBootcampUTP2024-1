@@ -20,65 +20,65 @@ junto a esta informacion generamos el nombre de usuario
 5 Y la ultima opcion de este menu es la salida de este 
 */
 
-const prompt = require('prompt-sync')();
-// Conversor de temperatura
+const prompt = require('prompt-sync')();// se utiliza para obtener entradas del usuario
+//desde la terminal 
 
-function conversor () {
+// Conversor de temperatura
+function conversor () { // En esta variable se realiza la funcion de tomar el dato dato por el usuario y hacer la operacion de conversión de celsius a fahrenheit
     console.log('\nBienvenid@ al conversor de grados celsius a grados fahrenheit');
     
-    const tempCelsius = parseFloat(prompt('Por favor ingresa el grado celsiu que deseas convertir: '));
-    const tempToFahrenheit = (9 / 5) * tempCelsius + 32;
+    const tempCelsius = parseFloat(prompt('Por favor ingresa el grado celsiu que deseas convertir: ')); // Almacena el valor dado por el usuario en la terminal
+    const tempToFahrenheit = (9 / 5) * tempCelsius + 32; // Realiza la operacion de conversion de los grados 
     console.log(`${tempCelsius}°C son ${tempToFahrenheit.toFixed(2)}°F`);
 };
 
 
 // Calculadora de IMC
 
-function calculadora () {
+function calculadora () { // En esta variable se realiza la funcion de tomar los valores dados por el usuario y realiza la operacion de IMC y entrega el resultado de la operación realizada
     console.log('\nBienvenid@ a la calculadora IMC');
     
-    const peso = parseFloat(prompt('Por favor, ingresa tu peso en kilogramos: '));
-    const altura = parseFloat(prompt('Por favor, ingresa tu altura en metros: '));
-    const IMC = peso / (altura ** 2);
+    const peso = parseFloat(prompt('Por favor, ingresa tu peso en kilogramos: ')); // Guarda el peso dado 
+    const altura = parseFloat(prompt('Por favor, ingresa tu altura en metros: ')); // Guarda la altura dada
+    const IMC = peso / (altura ** 2); // Realiza la operacion de IMC
     //const IMCRedondeado = Math.round(IMC * 100) / 100;
     console.log(`\nTu índice de masa corporal (IMC) es: ${IMC.toFixed(2)}`);
 };
 
 
 // Generador de nombre de usuario 
-
-function nombreDeUsuario () {
+function nombreDeUsuario () { // En esta variable se guarda los datos solictados al usuario y con los datos convierte y entrga un nombre de usuario
     console.log('\nBienvenid@ al generador de nombre de usuario');
 
-    const nombre = prompt('Ingrese su nombre: ');
-    const apellido = prompt('Ingrese su apellido: ');
-    const añoDeNacimiento = prompt('Ingrese su año de nacimiento: ');
-    const resultado = nombre+apellido+añoDeNacimiento;
+    const nombre = prompt('Ingrese su nombre: '); // Guarda el nombre del usuario
+    const apellido = prompt('Ingrese su apellido: '); // Guarda el apellido del usuario
+    const añoDeNacimiento = prompt('Ingrese su año de nacimiento: '); // Guarda el año de naciomiento del usuario
+    const resultado = nombre+apellido+añoDeNacimiento; // Convina el nombre, apellido y el año de nacimiento
     console.log(`Su nombre de usuario es: ${resultado}`);
 }
 
 
 //  Funcion Fibonacci 
 
-function Fibonacci () {
+function Fibonacci () { // En esta variable realiza la operacion de calcular la función fibonacci
     console.log('\nBienvenid@ a la Funcion Fibonacci');
 
-    function funccion (n) {
-        if (n <= 1) {
+    function funccion (n) { // Calcula el factorial
+        if (n <= 1) { 
             return n;
         }
         let dato1 = 0;
         let dato2 = 1;
 
-        for (let i = 2; i <= n; i++) {
-            const dato3 = dato1 + dato2;
+        for (let i = 2; i <= n; i++) { // Calcula el n-ésimo termino de la secuencia fibonacci, el bucle inicia desde i=2 ya que los primeros dos terminos son 1 y 1
+            const dato3 = dato1 + dato2; // en cada ciclo se calcula el siguiente termino fibonacci en el dato 3 sumando los valores en dato1 y dato2, luego se actualiza los valores de dato1 y dato2 para el siguiente ciclo, al terminar el bucle, en la variable de dato2 contendar el valor del término fibonacci
             dato1 = dato2;
             dato2 = dato3;
         }
         return dato2;
     };
-    const n = parseInt(prompt('Ingrese el valor de n: '));
-    const respuesta = funccion(n);
+    const n = parseInt(prompt('Ingrese el valor de n: ')); // Guarda el dato dado por el usuario desde la terminal
+    const respuesta = funccion(n); // Guarda el valor del resultado dado por la funccion fibonacci 
     console.log(`El ${n} número de Fibonacci es: ${respuesta}`);
 };
 
