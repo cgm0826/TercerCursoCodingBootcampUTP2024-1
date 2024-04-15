@@ -20,18 +20,19 @@ factorial del antes mencionado
 4 Salir este nos cerrara el menu al no escoger ninguna de las anteriores
 */
 
-const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')(); // se utiliza para obtener entradas del usuario
+//desde la terminal 
 
 // Adivina el numero [0,100)
 function adivinaElNumero () { //Esta función genera un número aleatorio entre 0 al 99 y tambien me adivina el numero y la veces que se intento
     
     console.log('Bienvenid@, adivina el número entre 0 y 99.');
-    const getRandomInt = Math.floor(Math.random() * 100);
-    let intentos = 0;
-    let adivinado = false;
+    const getRandomInt = Math.floor(Math.random() * 100); // Genera un numero entero aleatorio de 0 y 99
+    let intentos = 0; // Almacena las veces que se intento dar el numero exacto
+    let adivinado = false; // Revisa el resultado si es el exacto o no
 
     while (!adivinado) {
-        const dato = parseInt(prompt('Adivina el número: '));
+        const dato = parseInt(prompt('Adivina el número: ')); // Ingresa el valor dado por el usuario
 
         if (dato === getRandomInt) {
             adivinado = true;
@@ -51,12 +52,12 @@ function adivinaElNumero () { //Esta función genera un número aleatorio entre 
 // Calculadora de factorial
 function calFactorial () {
     console.log('Bienvenid@ a la calculadora factorial.')
-    let n = parseInt(prompt('Ingrese un número para calcular su factorial: '));
-    let factorial = 1;
+    let n = parseInt(prompt('Ingrese un número para calcular su factorial: ')); // Toma el valor dado por el usuario
+    let factorial = 1; 
     let resultado = 1;
 
-    while(factorial <= n) {
-        resultado = factorial * resultado
+    while(factorial <= n) { // Este bucle se ejecuta mientras factorial sea menor e igual a n
+        resultado = factorial * resultado // Toma el valor de resultado y lo multiplica por el resultado anterior
         factorial++
     };
     console.log(`El factorial de ${n} es: ${resultado}`);
@@ -65,9 +66,9 @@ function calFactorial () {
 
 // Contador de vocales
 function contadorDeVocales () {//En esta función toma una frase ingresada y realizada un conteo de cuantas vocales tiene la frase y devulve el resultado de la cantidad de vocales se encuentra 
-    const frase = prompt('Ingresa la frase: ');
-    let vocalA = (frase.match(/[a]/gi) ?? []).length;
-    let vocalE = (frase.match(/[e]/gi) ?? []).length;
+    const frase = prompt('Ingresa la frase: '); // Guarda el valor dado por el usuario desde la terminal
+    let vocalA = (frase.match(/[a]/gi) ?? []).length; // cuenta la cantidad de veces que se encuentra la vocal (a) por la frase dada por el usuario, frase.match(/[a]/gi) utiliza el metodo match para buscar todas las veces que se repite la letra (a), g es un modificador que indica que debe buscar todas las concidencias, i hace que la busqueda si hay mayusculas o minusculas no tenga problema en tomar la vocal (a)
+    let vocalE = (frase.match(/[e]/gi) ?? []).length; // ??[] este operador es un operador fusion nula, si no se encuentra concidencia se crea un arreglo vacio, y length obtine la longitud del arreglo 
     let vocalI = (frase.match(/[i]/gi) ?? []).length;
     let vocalO = (frase.match(/[o]/gi) ?? []).length;
     let vocalU = (frase.match(/[u]/gi) ?? []).length;
@@ -82,7 +83,7 @@ function contadorDeVocales () {//En esta función toma una frase ingresada y rea
 
 
 // menu 
-function menu() {
+function menu() { 
     console.log('\nMenú');
     console.log('1). Adivina el número.');
     console.log('2). Calculadora factorial.');
@@ -91,7 +92,7 @@ function menu() {
 
     let option = prompt('Seleccione una opción del menu: ');
 
-    switch(option) {
+    switch(option) { // es un menu que se entrega en la terminal para que el usuario le sea mas facil de interatuar con las programs realizados, en cada caso es la opcion que tome el usuario se seleciona la opcion dada y da a correr el programa deseado por el usuario y al final del programa vuelve el menu para elegir otra opcion o salir del menu
         case '1':
             console.log('\nHas seleccionado la opcion 1.');
             adivinaElNumero();
